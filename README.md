@@ -20,7 +20,6 @@ Follow the links below for configuration instructions.
 - [Theme](./docs/config/theme.md) (optional)
 - [PWA](./docs/config/pwa.md) (optional)
 - [I18N](./docs/config/i18n.md) (required)
-- [Cookies](./docs/config/cookies.md) (optional)
 
 ### Starting the app
 
