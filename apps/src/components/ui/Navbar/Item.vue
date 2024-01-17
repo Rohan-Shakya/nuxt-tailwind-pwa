@@ -20,7 +20,9 @@ const props = defineProps<{
 }>();
 
 const isActive = computed(() => {
-  if (props.menu.link === route.path) return true;
+  if (props.menu.link === route.path) {
+    return true;
+  }
 
   return false;
 });

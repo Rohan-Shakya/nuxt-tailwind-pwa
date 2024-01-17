@@ -71,7 +71,7 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['~/stores/**', '#/stores/**', '@/stores/**'],
   },
-  // eslint-disable-next-line unicorn/expiring-todo-comments
+
   // TODO: build is consistently failing because of this. check whether we need pre-render check.
   nitro: {
     prerender: {
@@ -80,9 +80,9 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
   },
   routeRules: {
-    '/_ipx/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/icons/**': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
-    '/favicon.ico': { headers: { 'cache-control': `public, max-age=31536000, immutable` } },
+    '/_ipx/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+    '/icons/**': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
+    '/favicon.ico': { headers: { 'cache-control': 'public, max-age=31536000, immutable' } },
   },
   runtimeConfig: {
     public: {

@@ -1,4 +1,4 @@
-export interface ICounterState {
+interface ICounterState {
   count: number;
 }
 

@@ -1,5 +1,5 @@
 export const useCsrfToken = () => {
-  const state = useState(`useCsrfToken`, () => ({
+  const state = useState('useCsrfToken', () => ({
     token: '',
   }));
 

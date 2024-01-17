@@ -9,7 +9,9 @@
         }"
         :variant="notification.variant"
       >
-        <p class="px-3">{{ notification.text }}</p>
+        <p class="px-3">
+          {{ notification.text }}
+        </p>
       </UiAlert>
 
       <h1 class="drop-shadow-xl text-2xl sm:text-3xl md:text-4xl block font-bold uppercase text-center">
@@ -21,9 +23,9 @@
           <div>
             <label for="email" class="sr-only">{{ $t('form.emailLabel') }}:</label>
             <input
+              id="email"
               v-model="email"
               type="email"
-              id="email"
               autocomplete="email"
               required
               class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -33,9 +35,9 @@
           <div>
             <label for="password" class="sr-only">{{ $t('form.passwordLabel') }}:</label>
             <input
+              id="password"
               v-model="password"
               type="password"
-              id="password"
               autocomplete="current-password"
               required
               class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -90,7 +92,7 @@ const notification = reactive<{
   variant: 'success',
 });
 
-const handleSubmit = async () => {
+const handleSubmit = () => {
   if (!email.value) {
     notification.text = t('errorMessages.email.required');
     notification.variant = 'danger';

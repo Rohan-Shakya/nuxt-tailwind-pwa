@@ -1,3 +1,12 @@
+<template>
+  <NuxtLink v-if="to" tag="a" :to="to" :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`">
+    <slot>{{ text }}</slot>
+  </NuxtLink>
+  <a v-else :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`" :href="href" @click="onClick">
+    <slot>{{ text }}</slot>
+  </a>
+</template>
+
 <script lang="ts" setup>
 const props = defineProps({
   text: {
@@ -61,12 +70,3 @@ const onClick = (event: MouseEvent) => {
   }
 };
 </script>
-
-<template>
-  <NuxtLink v-if="to" tag="a" :to="to" :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`">
-    <slot>{{ text }}</slot>
-  </NuxtLink>
-  <a v-else :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`" :href="href" @click="onClick">
-    <slot>{{ text }}</slot>
-  </a>
-</template>

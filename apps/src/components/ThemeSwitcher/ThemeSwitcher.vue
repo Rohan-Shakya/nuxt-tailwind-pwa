@@ -1,28 +1,3 @@
-<script lang="ts" setup>
-const props = defineProps({
-  type: {
-    type: String,
-    default: 'dropdown-right-top',
-  },
-});
-const currentStyle = toRef(props, 'type');
-
-const availableThemes = [
-  {
-    key: 'light',
-    text: 'Light',
-  },
-  {
-    key: 'dark',
-    text: 'Dark',
-  },
-  {
-    key: 'system',
-    text: 'System',
-  },
-];
-</script>
-
 <template>
   <div class="flex items-center">
     <HeadlessListbox
@@ -31,7 +6,7 @@ const availableThemes = [
       as="div"
       class="relative flex items-center"
     >
-      <HeadlessListboxLabel class="sr-only">Theme</HeadlessListboxLabel>
+      <HeadlessListboxLabel class="sr-only"> Theme </HeadlessListboxLabel>
       <HeadlessListboxButton type="template">
         <div class="dark:text-gray-400 text-gray-600">
           <span class="flex justify-center items-center dark:hidden">
@@ -75,3 +50,28 @@ const availableThemes = [
     </select>
   </div>
 </template>
+
+<script lang="ts" setup>
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'dropdown-right-top',
+  },
+});
+const currentStyle = toRef(props, 'type');
+
+const availableThemes = [
+  {
+    key: 'light',
+    text: 'Light',
+  },
+  {
+    key: 'dark',
+    text: 'Dark',
+  },
+  {
+    key: 'system',
+    text: 'System',
+  },
+];
+</script>

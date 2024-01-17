@@ -1,18 +1,3 @@
-export interface NuxtAppConfig {
-  name?: string;
-  description?: string;
-  project: {
-    github: string;
-  };
-  author?: {
-    name?: string;
-    links?: {
-      github?: string;
-      website?: string;
-    };
-  };
-}
-
 export default defineAppConfig({
   name: 'Nuxt Tailwind PWA',
   description: 'a starter template for Nuxt 3 with HeadlessUI, Tailwindcss and PWA.',

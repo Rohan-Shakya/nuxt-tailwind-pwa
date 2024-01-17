@@ -4,12 +4,5 @@
   "compilerOptions": {
     "types": ["@pinia/nuxt", "@vite-pwa/nuxt"]
   },
-  "exclude": ["node_modules", "mocks"],
-  "typedocOptions": {
-    "entryPoints": ["composables/index.ts"],
-    "out": "docs/reference/composables",
-    "excludeExternals": true,
-    "githubPages": false,
-    "readme": "none"
-  }
+  "exclude": ["node_modules"]
 }

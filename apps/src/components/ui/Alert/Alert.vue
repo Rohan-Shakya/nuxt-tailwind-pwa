@@ -1,18 +1,17 @@
 <template>
   <div :class="['inline-flex items-center justify-center', classes]">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts"></script>
+
+<script setup lang="ts">
+import type { AlertProps } from './types';
 const sizeClasses = {
   sm: 'text-xs p-1 gap-1',
   base: 'text-sm p-1.5 gap-1.5',
 };
-</script>
-
-<script setup lang="ts">
-import type { AlertProps } from './types';
 
 const props = withDefaults(defineProps<AlertProps>(), {
   size: 'base',

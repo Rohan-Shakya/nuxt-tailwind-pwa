@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['custom/nuxt', 'prettier'],
+  extends: ['prettier', '@nuxtjs/eslint-config-typescript'],
   parserOptions: {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
@@ -7,16 +7,8 @@ module.exports = {
   },
   rules: {
     complexity: 0,
-    'vue/max-len': [
-      'warn',
-      {
-        code: 120,
-        ignoreStrings: true,
-        ignoreUrls: true,
-        ignoreTemplateLiterals: true,
-        ignoreHTMLAttributeValues: true,
-      },
-    ],
+    'no-const-assign': 0,
+    'no-console': 'off',
     'max-lines-per-function': 'off',
     'unicorn/no-keyword-prefix': ['error', { disallowedPrefixes: ['new', 'for'] }],
     'no-secrets/no-secrets': 'off',
